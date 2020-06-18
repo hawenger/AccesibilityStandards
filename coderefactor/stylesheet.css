@@ -1,25 +1,40 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
+    height: auto;
     width: auto;
-    line-height: 150%;
 }
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 
 body {
     background-color: #d9dcd6;
+    height: auto;
+    text-size-adjust: auto;
+    background-image: url(../coderefactor/DigitalMarketingMeeting.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 header {
-    padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c;
+    background-color: #2a607c7a;
     color: #ffffff;
-    
-    
-}
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 10%;
+    }
+
 header h1 {
     display: inline-block;
-    font-size: 48px;
+    font-size: 150px;
+    padding: 2% 0% 2% 6%;
 }
 
 header h1 .seo {
@@ -27,48 +42,59 @@ header h1 .seo {
 }
 
 nav {
-    font-size: 20px;
     display: inline-block;
-    width: 720px;
-    text-align: center;
+    width: 100%;
+    padding-left: 4%;
+    justify-content: space-evenly;
+    padding-top: 12%;
+    margin-bottom: 10em;
+    padding-bottom: 25%;
+}
+
+main {
+    position: relative;
+    top: 250px;
 }
 
 .button {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    border-radius: 5px;
     background-color: #2a607c;
-    border: 3px solid #ffffff;
-    height: auto;
-    width: auto;
-    padding: 10px;
+    border: .2em solid #ffffff;
+    padding: 2%;
     display: inline-block;
-    margin: 2%;
+    margin: 0% 0% 4% 5%;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #ffffff;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    padding: 1% 2% 1% 2%;
+    width: 25%;
+    height: 100px;
+    display: block;
 }
 
+.button {
+    transition-duration: 0.4s;
+}
 
+.button:hover {
+    background-color: #2a607c7a;
+    color: #ffffff;
+    border-color: #2a607c
+}
+        
 .content dt {
     font-size: 24px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
 }
 .content dd {
-    font-size: 20px;
+    font-size: 18px;
     text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
-
-main {
-    height: 1500px;
-    width: 100%;
-    margin-bottom: auto;
-    background-image: url("../coderefactor/DigitalMarketingMeeting.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
 
 
 .float-left {
@@ -84,21 +110,34 @@ main {
 .content {
     width: 75%;
     display: inline-block;
-    margin-left: 20px;
-    margin-top: 10%;
+    padding-left: 4%;
+    padding-top: 4%;
 }
 
 .content dl {
-    margin-bottom: 10%;
-    height: 90%;
+    margin-bottom: 20%;
     border: 3px solid #0072bb;
-    border-radius: 12px;
+    border-radius: 10em 0em;
+    padding: 50px;
+    background-color: #0072bb;
+    color: #ffffff;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
+    box-shadow: -20px 11px 6px 0px #0a1b2557;
+}
+
+
+.content img {
+    max-height: 200px;
+    border: .3em solid #0a1b25;
+    border-radius: 10em;
 }
 
 .benefits {
-    margin-top: 10%;
-    margin-right: 20px;
-    padding: 20px;
+    margin-top: 6%;
+    margin-right: 2%;
+    padding: 4% 1%;
     clear: both;
     float: right;
     width: 20%;
@@ -106,19 +145,22 @@ main {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
     border: 3px solid #2589bd;
-    border-radius: 6px;
+    border-radius: 3em;
 }
 
 .benefits dl {
     text-align: center;
-    margin-bottom: 50%;
+    padding: 15% 3%;
+    text-overflow: ellipsis;
+    overflow-wrap: break-word;
 }
 
 .benefits dt {
-    font-size: 20px;
+    font-size: 24px;
 }
 .benefits dd {
     font-size: 16px;
+    line-height: 1.5;
 }
 
 .benefit-lead {
@@ -151,86 +193,20 @@ main {
     text-align: center;
 }
 
-.benefit-lead img {
+.benefits img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+footer small {
     margin-top: 20%;
     font-size: 20px;
 }
