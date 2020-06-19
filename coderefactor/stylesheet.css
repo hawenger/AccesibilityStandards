@@ -25,16 +25,22 @@ header {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c7a;
     color: #ffffff;
-    width: 100%;
-    height: auto;
+    width: 38em;
+    height: 38em;
     position: sticky;
-    top: 10%;
-    }
+    top: 5%;
+    border-radius: 50%;
+    margin-top: 5em;
+    margin-left: 2%;
+    display: block;
+}
 
 header h1 {
     display: inline-block;
-    font-size: 150px;
-    padding: 2% 0% 2% 6%;
+    font-size: 5em;
+    padding: .8em 0% .01em 17%;
+    width: 100%;
+    margin: .8em 0% 1% 20%;
 }
 
 header h1 .seo {
@@ -43,34 +49,36 @@ header h1 .seo {
 
 nav {
     display: inline-block;
-    width: 100%;
-    padding-left: 4%;
+    width: 38em;
     justify-content: space-evenly;
-    padding-top: 12%;
-    margin-bottom: 10em;
-    padding-bottom: 25%;
+    position: sticky;
+    left: 6em;
+    bottom: 45%;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    margin: 15em 0% 0% 2%;
+    border-top: solid #ffffff;
 }
 
 main {
     position: relative;
     top: 250px;
+    width: 100%;
 }
 
 .button {
-    background-color: #2a607c;
     border: .2em solid #ffffff;
-    padding: 2%;
-    display: inline-block;
-    margin: 0% 0% 4% 5%;
-    font-size: 20px;
+    margin: 5% 0% 4% 5%;
+    font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #ffffff;
     text-overflow: ellipsis;
     overflow-wrap: break-word;
     padding: 1% 2% 1% 2%;
-    width: 25%;
-    height: 100px;
+    width: 30%;
+    min-height: 3.3em;
     display: block;
+    background-color: #ffffff21;
+    color: #ffffff;
 }
 
 .button {
@@ -84,17 +92,33 @@ main {
 }
         
 .content dt {
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     margin-bottom: 20px;
     padding: 15px;
+    border-bottom: .3em solid #ffffff;
 }
 .content dd {
-    font-size: 18px;
+    font-size: 16px;
     text-align: justify;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
+
+.search-engine-optimization dd {
+    padding-left: 50%;
+
+}
+
+.online-reputation-management dd {
+    padding-right: 50%;
+
+}
+
+.social-media-marketing dd {
+    padding-left: 50%;
+
+}
 
 
 .float-left {
@@ -110,42 +134,51 @@ main {
 .content {
     width: 75%;
     display: inline-block;
-    padding-left: 4%;
     padding-top: 4%;
+    min-width: 48em;
+    max-width: 75%;
 }
 
 .content dl {
     margin-bottom: 20%;
-    border: 3px solid #0072bb;
-    border-radius: 10em 0em;
+    margin-left: 4%;
     padding: 50px;
     background-color: #0072bb;
     color: #ffffff;
     line-height: 1.5;
     text-overflow: ellipsis;
     overflow-wrap: break-word;
+    overflow: hidden;
     box-shadow: -20px 11px 6px 0px #0a1b2557;
+    border: .3em solid #2589bd;
+    border-radius: 1px;
 }
 
 
 .content img {
     max-height: 200px;
-    border: .3em solid #0a1b25;
-    border-radius: 10em;
+    border: .3em solid #ffffff;
+    border-radius: 3em;
+    position: relative;
+    top: 3%;
+
+    
 }
 
 .benefits {
-    margin-top: 6%;
+    margin-top: 4%;
     margin-right: 2%;
-    padding: 4% 1%;
+    padding: 3% 0%;
     clear: both;
     float: right;
     width: 20%;
+    min-width:20%;
     height: auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
-    border: 3px solid #2589bd;
-    border-radius: 3em;
+    border: .3em solid #0072bb;
+    border-radius: 1px;
+    overflow: hidden;
 }
 
 .benefits dl {
@@ -153,6 +186,7 @@ main {
     padding: 15% 3%;
     text-overflow: ellipsis;
     overflow-wrap: break-word;
+    
 }
 
 .benefits dt {
@@ -197,6 +231,7 @@ main {
     display: block;
     margin: 10px auto;
     max-width: 150px;
+    
 }
 
 footer {
@@ -204,6 +239,7 @@ footer {
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    margin-top: 20%;
 }
 
 footer small {
