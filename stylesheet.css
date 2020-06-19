@@ -88,7 +88,8 @@ main {
 .button:hover {
     background-color: #2a607c7a;
     color: #ffffff;
-    border-color: #2a607c
+    border-color: #2a607c;
+    cursor: pointer;
 }
         
 .content dt {
