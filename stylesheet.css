@@ -1,16 +1,29 @@
 * {
+
     height: auto;
     width: auto;
 }
 
 html {
+
     box-sizing: border-box;
   }
+
   *, *:before, *:after {
+
     box-sizing: inherit;
   }
 
+/* 
+Above - formatting border-box, height & width whole page 
+*/
+
+/*
+Below - body and background image formatting whole page 
+*/
+
 body {
+
     background-color: #d9dcd6;
     height: auto;
     text-size-adjust: auto;
@@ -21,37 +34,45 @@ body {
     background-repeat: no-repeat;
 }
 
-header {
+/* 
+Below - Begin visible portion page including header1 and nav bar which are sticky. Note Button position important, if sticky not supported by browser, buttons won't overlap with header1 and still be accesible. All margins and padding critical for semi-responsive page design 
+*/
+
+header {   /* appears as decorative circle container on left side of page */
+
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #2a607c7a;
+    background-color: #2a607c7a; /*Color not available on all browsers */
     color: #ffffff;
-    width: 38em;
-    height: 38em;
+    width: 40em;          /* note em size critical to maintaining dimensions and semi-responsive page design, change these ems make sure to change em on buttons, nav and min. width for .content &/or boxes containg .contens minimum width*/
+    height: 40em;
     position: sticky;
     top: 5%;
     border-radius: 50%;
     margin-top: 5em;
-    margin-left: 2%;
+    margin-left: 2%;     /* margin left consistent throughout, if changed, change to match in other boxes */
     display: block;
 }
 
 header h1 {
+
     display: inline-block;
     font-size: 5em;
-    padding: .8em 0% .01em 17%;
+    padding: .8em 0% .01em 19%;
     width: 100%;
     margin: .8em 0% 1% 20%;
 }
 
-header h1 .seo {
+header h1 .seo {    /* Color control three letters in header one */
+
     color: #d9dcd6;
 }
 
-nav {
+nav { /* Note, if changing spacing and keeping sticky, current dimensions keep buttons from overlapping with heading */
+
     display: inline-block;
     width: 38em;
     justify-content: space-evenly;
-    position: sticky;
+    position: sticky;          /* I change position from sticky, change z-index of buttons to show through decorative container which lives on header */
     left: 6em;
     bottom: 45%;
     overflow-wrap: break-word;
@@ -61,78 +82,53 @@ nav {
 }
 
 main {
+
     position: relative;
     top: 250px;
     width: 100%;
 }
 
-.button {
+.button { /* Note, buttons=page anchors, if changing spacing and keeping sticky, current dimensions keep buttons from overlapping with heading */
+                                /* Buttons no longer active once touching section one but visible in between sections as index of page content and avtive when below section one as way to navigate back up the page without scroll*/
     border: .2em solid #ffffff;
     margin: 5% 0% 4% 5%;
     font-size: 16px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
     text-overflow: ellipsis;
     overflow-wrap: break-word;
     padding: 1% 2% 1% 2%;
     width: 30%;
     min-height: 3.3em;
     display: block;
-    background-color: #ffffff21;
+    background-color: #ffffff21; /* Color not supported by all browsers */
     color: #ffffff;
+    text-shadow: 0px -2px 4px black; /* Shadow makes buttons visible on browsers where all colors aren't supported */
 }
 
+/* 
+Below - button hover controls 
+*/
+
 .button {
+
     transition-duration: 0.4s;
 }
 
 .button:hover {
-    background-color: #2a607c7a;
+
+    background-color: #2a607c7a; /* Color not supported in all browsers */
     color: #ffffff;
     border-color: #2a607c;
     cursor: pointer;
 }
-        
-.content dt {
-    font-size: 20px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 15px;
-    border-bottom: .3em solid #ffffff;
-}
-.content dd {
-    font-size: 16px;
-    text-align: justify;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
 
-.search-engine-optimization dd {
-    padding-left: 50%;
+/* 
+Below - begin section 1.  Portion visible after scroll 
+*/
 
-}
-
-.online-reputation-management dd {
-    padding-right: 50%;
-
-}
-
-.social-media-marketing dd {
-    padding-left: 50%;
-
-}
-
-
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-.content {
+.content {      /* Sizing for section 1 contents. Contains min-width critical to semi responsive page design */
     width: 75%;
     display: inline-block;
     padding-top: 4%;
@@ -140,7 +136,7 @@ main {
     max-width: 75%;
 }
 
-.content dl {
+.content dl { /* Responsible for section 1 individual box sizing and contents */
     margin-bottom: 20%;
     margin-left: 4%;
     padding: 50px;
@@ -155,25 +151,78 @@ main {
     border-radius: 1px;
 }
 
+.content dt { /* Responsible for styling and dimensions of titles in section one */
+
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-bottom: .3em solid #ffffff;
+}
+
+.content dd { /* Responsible for styling and dimensions of paragraphs in section one */
+
+    font-size: 16px;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.search-engine-optimization dd { /* Keeps from overlap with img on small page */
+    
+    padding-left: 50%;
+}
+
+.online-reputation-management dd { /* Keeps from overlap with img on small page */
+    
+    padding-right: 50%;
+}
+
+.social-media-marketing dd { /* Keeps from overlap with img on small page */
+    
+    padding-left: 50%;
+}
+
+/*
+Below - image configurations for section one
+*/
+
+.float-left {
+
+    float: left;
+    margin-right: 25px;
+}
+
+.float-right {
+
+    float: right;
+    margin-left: 25px;
+}
+
 
 .content img {
+
     max-height: 200px;
     border: .3em solid #ffffff;
     border-radius: 3em;
     position: relative;
     top: 3%;
-
-    
 }
 
-.benefits {
+/*
+Below - begin section 2 (right hand side of page or below section one on small page 
+*/
+
+.benefits { /* Styling for section two container, parent element */
+
     margin-top: 4%;
     margin-right: 2%;
+    margin-bottom: 4%;
     padding: 3% 0%;
     clear: both;
     float: right;
-    width: 20%;
-    min-width:20%;
+    width: 20%; /* If width not set, box will appear at bottom of screen instead of next to section 2 even on large screen */
+    min-width:20%; /* Keep box from becoming illegible on very small screens */
     height: auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
@@ -182,7 +231,8 @@ main {
     overflow: hidden;
 }
 
-.benefits dl {
+.benefits dl { /* Responsible for centering and overflow on section two */
+
     text-align: center;
     padding: 15% 3%;
     text-overflow: ellipsis;
@@ -190,60 +240,46 @@ main {
     
 }
 
-.benefits dt {
+.benefits dt { /* Responsible for titles on section two */
+    
     font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #ffffff;
 }
-.benefits dd {
+.benefits dd { /* Responsible for "blurbs" on section two */
+    
     font-size: 16px;
     line-height: 1.5;
-}
-
-.benefit-lead {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
+.benefits img { /* Responsible for images section two */
 
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefits img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
-    
 }
+
+/*
+End main section, below - footer stylings 
+*/
 
 footer {
-    padding: 30px;
     clear: both;
+    width: 50%;
+    margin-bottom: 2%;
+    margin-top: 50em;
+    margin-left: 4%;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    margin-top: 20%;
+
 }
 
-footer small {
-    margin-top: 20%;
-    font-size: 20px;
+.footersmall {
+
+    font-size: 16px;
+    text-overflow: ellipsis;
+    overflow-wrap:  break-word;
+    
 }
