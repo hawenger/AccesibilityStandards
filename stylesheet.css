@@ -14,7 +14,7 @@ body {
     background-color: #d9dcd6;
     height: auto;
     text-size-adjust: auto;
-    background-image: url(../AccesibilityStandards/DigitalMarketingMeeting.jpg);
+    background-image: url("../AccesibilityStandards/DigitalMarketingMeeting.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
